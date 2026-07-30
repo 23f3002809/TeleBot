@@ -54,12 +54,13 @@ def upload_log():
             resp.raise_for_status()
             return
 
-        # Merge: keep whatever's remote, append what's local but not already there
-        if local_content not in remote_content:
-            new_content = remote_content + local_content
-        else:
-            new_content = remote_content
-
+        
+        # if local_content not in remote_content:
+        #     new_content = remote_content + local_content
+        # else:
+        #     new_content = remote_content
+        
+        new_content = local_content
         payload = {
             "message": "Update run log",
             "content": base64.b64encode(new_content.encode("utf-8")).decode("utf-8"),
