@@ -2,4 +2,4 @@ fastapi
 uvicorn
 python-telegram-bot
 openai
-request
+requests
