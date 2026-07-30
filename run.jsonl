@@ -47,3 +47,18 @@
 {"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 42, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439748.8781765}
 {"type": "incoming", "chat_id": 5256255618, "text": "What is the capital of France?\n\nReply ONLY as:\n\n{\n  \"capital\": \"\"\n}", "timestamp": 1785439773.694326}
 {"type": "outgoing", "chat_id": 5256255618, "text": "{\"capital\": \"Paris\", \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439776.6797938}
+
+{"type": "incoming", "chat_id": 5256255618, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785439641.8095741}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439650.3286228}
+{"type": "incoming", "chat_id": 5256255618, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785439652.8376977}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439655.6100943}
+{"type": "incoming", "chat_id": 5256255618, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785439657.5527732}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439660.019891}
+{"type": "incoming", "chat_id": 5256255618, "text": "haha", "timestamp": 1785439689.7838395}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439695.9767964}
+{"type": "incoming", "chat_id": 5256255618, "text": "What is 25 + 17?\n\nReply ONLY as:\n\n{\n  \"answer\": 42\n}", "timestamp": 1785439746.5374186}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"answer\": 42, \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439748.8781765}
+{"type": "incoming", "chat_id": 5256255618, "text": "What is the capital of France?\n\nReply ONLY as:\n\n{\n  \"capital\": \"\"\n}", "timestamp": 1785439773.694326}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"capital\": \"Paris\", \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439776.6797938}
+{"type": "incoming", "chat_id": 5256255618, "text": "Which planet is known as the Red Planet?\n\nReply ONLY as:\n\n{\n  \"planet\": \"\"\n}", "timestamp": 1785439840.0186641}
+{"type": "outgoing", "chat_id": 5256255618, "text": "{\"planet\": \"Mars\", \"log_url\": \"https://raw.githubusercontent.com/23f3002809/TeleBot/main/run.jsonl\"}", "timestamp": 1785439843.1382062}
