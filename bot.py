@@ -8,7 +8,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filte
 
 TELEGRAM_BOT_TOKEN = "8877348343:AAGyT1SbtDeXsgDhzOa9HzrImRAfZoQx-jU"
 AIPIPE_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjMwMDI4MDlAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc4NTQyNjIwMywiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc4NjAzMTAwM30.cjKfoyr6QijVXp145SR9N8Oip8Yp8qW1OJFlSGJFtjg"
-LOG_URL = "PASTE_YOUR_PUBLIC_LOG_URL_HERE"  
+LOG_URL = "https://github.com/23f3002809/TeleBot/blob/main/run.jsonl"  
 
 client = OpenAI(base_url="https://aipipe.org/openai/v1", api_key=AIPIPE_TOKEN)
 LOG_FILE = "run.jsonl"
