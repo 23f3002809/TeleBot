@@ -5,6 +5,35 @@ from openai import OpenAI
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 
+import os
+import subprocess
+import threading
+
+subprocess.run(["git", "config", "--global", "user.name", "Render Bot"])
+subprocess.run(["git", "config", "--global", "user.email", "your@email.com"])
+
+token = os.environ["GITHUB_TOKEN"]
+
+subprocess.run([
+    "git",
+    "remote",
+    "set-url",
+    "origin",
+    f"https://{token}@github.com/23f3002809/TeleBot.git"
+])
+
+def push_log():
+    try:
+        subprocess.run(["git", "add", "run.jsonl"], check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "Update run log"],
+            check=False,
+            capture_output=True
+        )
+        subprocess.run(["git", "push"], check=True)
+    except Exception as e:
+        print("Push failed:", e)
+
 
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 AIPIPE_TOKEN = os.environ["AIPIPE_TOKEN"]
@@ -53,6 +82,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     final_reply = json.dumps(parsed)
 
     log_event({"type": "outgoing", "chat_id": chat_id, "text": final_reply})
+    threading.Thread(target=push_log, daemon=True).start()
     await update.message.reply_text(final_reply)
 
 app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
