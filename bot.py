@@ -16,7 +16,7 @@ GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 GITHUB_REPO = "23f3002809/TeleBot"
 GITHUB_FILE_PATH = "run.jsonl"
 
-LOG_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/{GITHUB_FILE_PATH}"
+LOG_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/main/{GITHUB_FILE_PATH}"
 
 client = OpenAI(base_url="https://aipipe.org/openai/v1", api_key=AIPIPE_TOKEN)
 LOG_FILE = "run.jsonl"
