@@ -6,8 +6,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 
 
-TELEGRAM_BOT_TOKEN = "8877348343:AAGyT1SbtDeXsgDhzOa9HzrImRAfZoQx-jU"
-AIPIPE_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjMwMDI4MDlAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc4NTQyNjIwMywiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc4NjAzMTAwM30.cjKfoyr6QijVXp145SR9N8Oip8Yp8qW1OJFlSGJFtjg"
+TELEGRAM_BOT_TOKEN = ""
+AIPIPE_TOKEN = ""
 LOG_URL = "https://raw.githubusercontent.com/23f3002809/TeleBot/refs/heads/main/run.jsonl"  
 
 client = OpenAI(base_url="https://aipipe.org/openai/v1", api_key=AIPIPE_TOKEN)
