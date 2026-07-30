@@ -3,7 +3,9 @@ import time
 import os
 from openai import OpenAI
 from telegram import Update
-from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
+from fastapi import FastAPI, Request
+from telegram import Update
+from telegram.ext import Application, MessageHandler, ContextTypes, filters
 
 import os
 import subprocess
@@ -85,7 +87,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     threading.Thread(target=push_log, daemon=True).start()
     await update.message.reply_text(final_reply)
 
-app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-print("Bot is running... (Ctrl+C to stop)")
-app.run_polling()
+telegram_app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+telegram_app.add_handler(
+    MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message)
+)
+
+app = FastAPI()
